@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SelamiComponent } from './selami/selami.component';
+import { NewsComponent } from './news/news.component';
+
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
-      SelamiComponent
+      NewsComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
