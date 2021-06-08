@@ -1,3 +1,13 @@
-<p>
-  news works!
-</p>
+<div fxLayout="row wrap">
+
+  <div *ngFor="let news of news" routerLink="/newsDetail/{{news.id}}/{{news.title}}" class="btn btn-sm btn-light" fxFlex="0 0 100%" [ngStyle.gt-sm]="{'margin.px': 6}"
+    [ngStyle]="{'margin.px': 6, 'margin-bottom.px': 20} " fxFlex.gt-sm="0 0 calc(33% -12px)">
+    <mat-card>
+      <img mat-card-image src="{{news.photoUrl}}" alt="Photo of a item">
+      <mat-card-header>
+        <mat-card-title style="font-size:1.6rem;" id="card"><b>{{news.title}}</b></mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+
+</div>
