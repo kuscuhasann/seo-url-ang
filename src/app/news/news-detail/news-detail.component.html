@@ -1,0 +1,19 @@
+<div class="mobilUyumluluk">
+<main role="main" class="container">
+ 
+    <div class="row">
+     <h1 class="mt-3 pt-3">{{news?.title}}</h1>
+      <ngx-gallery *ngIf="galleryImages" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    </div>
+    <div  *ngIf="news"  class="row">
+    <font color="#000000"> 
+
+
+        <div class="responsive" [innerHTML]="news.description">
+        
+        </div>
+    </font>
+    </div>
+ 
+</main>
+</div>

@@ -5,17 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
 import { HttpClientModule } from "@angular/common/http";
+import { NgxGalleryModule } from 'ngx-gallery-9';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 
 
 @NgModule({
   declarations: [		
     AppComponent,
-      NewsComponent
+      NewsComponent,
+      NewsDetailComponent,
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     HttpClientModule,
+    NgxGalleryModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+@media only screen and (max-width:768px) {
+	
+    .mobilUyumluluk {
+        font-family: Arial;
+        margin:20px;
+        padding:20px
+    }
+    .responsive {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+    .ayar{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    img{
+        height: 1px; 
+        width: 16%;
+        object-fit:fill;
+     }
+    
+    
+    
+    }
+    
