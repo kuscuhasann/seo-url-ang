@@ -27,7 +27,8 @@
             "styles": [
               "src/styles.css",
               "bootstrap/dist/css/bootstrap.min.css",
-              "font-awesome/css/font-awesome.min.css"
+              "font-awesome/css/font-awesome.min.css",
+              "bootswatch/dist/minty/bootstrap.min.css"
 
             ],
             "scripts": []

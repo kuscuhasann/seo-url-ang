@@ -27,6 +27,7 @@
     "@angular/router": "~11.2.11",
     "@nguniversal/express-engine": "^11.2.1",
     "bootstrap": "^5.0.1",
+    "bootswatch": "^5.0.1",
     "express": "^4.15.2",
     "font-awesome": "^4.7.0",
     "ngx-gallery-9": "^1.0.6",
