@@ -1,3 +1,33 @@
-<p>
-  nav works!
-</p>
+<div  id="background-nav" fxLayout="column">
+    
+
+    <div fxLayoutGap="2%" fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row"
+        class="main-toolbar-wrapper p-3">
+
+        <div  fxFlex="10" class="branding pl-2">
+            <img class="navbar-brand" id="nav-cursor" href="#" src="https://res.cloudinary.com/finarfin/image/upload/v1617455495/akqnc4iyfwuryjeza2yi.png" routerLink="#" alt="" width="150" height="50">
+            
+        </div>
+
+        <div fxFlex="" fxLayoutAlign="space-around center" fxLayoutGap="2%" fxHide.xs #searchFields>
+        <a *ngFor="let category of category" id="category-color" class="navbar-brand" routerLink="news/category/{{category.id}}/{{category.categoryName | urlformat}}">{{category.categoryName}}  &nbsp; </a>
+        
+    </div>
+
+    <!-- Only show on mobile version -->
+    <div fxLayout="row" *ngIf="searchFields.style.display === 'none' && showSearchPane">
+        <div id="searchPane" class="full-width p-2">
+            <div class="full-width">
+                <mat-form-field class="material-input-full-width">
+                    <input type="text" placeholder="Select Location" aria-label="Number" matInput
+                        [formControl]="myControl" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of options" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>

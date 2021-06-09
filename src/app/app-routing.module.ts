@@ -7,7 +7,9 @@ import { NewsComponent } from './news/news.component';
 const routes: Routes = [
   { path: "news", component: NewsComponent },
   { path: "newsDetail/:newsId/:title", component: NewsDetailComponent },
+  { path: "news/category/:categoryId/:categoryName", component:NewsComponent},
   { path: "**", redirectTo: "news", pathMatch: "full" },
+  
 ];
 
 @NgModule({

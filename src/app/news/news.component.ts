@@ -8,6 +8,7 @@ import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { style } from '@angular/animations';
+import { SeoService } from "../services/seo.service";
 
 @Component({
   selector: 'app-news',
@@ -22,6 +23,7 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
     private activatedRoute:ActivatedRoute,
     private cdRef: ChangeDetectorRef,
     private mediaObserver: MediaObserver,
+    private seoService: SeoService,
 
     ) { }
 
