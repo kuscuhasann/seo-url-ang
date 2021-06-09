@@ -11,17 +11,19 @@ import { MaterialModule } from './core/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavComponent } from './nav/nav.component';
 import { UrlformatPipe } from './pipes/urlformat.pipe';
+import { DownNavComponent } from './down-nav/down-nav.component';
 
 
 
 
 @NgModule({
-  declarations: [			
+  declarations: [				
     AppComponent,
       NewsComponent,
       NewsDetailComponent,
       NavComponent,
       UrlformatPipe,
+      DownNavComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
