@@ -13,13 +13,11 @@ import { NavComponent } from './nav/nav.component';
 import { UrlformatPipe } from './pipes/urlformat.pipe';
 import { DownNavComponent } from './down-nav/down-nav.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-
-
-
-
+import { SliderComponent } from './slider/slider.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       NewsComponent,
       NewsDetailComponent,
@@ -27,6 +25,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
       UrlformatPipe,
       DownNavComponent,
       PrivacyPolicyComponent,
+      SliderComponent
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -35,6 +34,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     NgxGalleryModule,
     MaterialModule,
     FlexLayoutModule,
+    SlickCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

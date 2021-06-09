@@ -1,0 +1,29 @@
+<div fxLayout="column">
+  
+    <div fxLayoutGap="2%" fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row"
+        class="main-toolbar-wrapper p-3">
+
+  <div fxFlex="" fxLayoutAlign="space-around center" fxLayoutGap="2%" fxHide.xs #searchFields>
+
+    <div class="slider" style="width: 68rem;  " id="yanyana_hizalama">
+      <div  class="btn btn-sm btn-light" id="slider-cursor" class="callbacks_container" >
+        <ul class="rslides callbacks callbacks1">
+          <ngx-slick-carousel class="carousel" 
+                  #slickModal="slick-carousel" 
+                  [config]="slideConfig" >
+            <li ngxSlickItem *ngFor="let news of news | slice:0:5; let i=index " class="slide">
+                <div class="banner-top"  routerLink="/newsDetail/{{news.id}}/{{news.title |urlformat}}"  >
+                  <img class="card-img-top"src="{{news.photoUrl}}" class="img" alt="Card image cap" >
+                </div>
+                <div>
+                <b style="font-size:1.6rem; font-style:italic;color:#111188;"> {{news.title}}</b>
+                </div>
+            </li>
+          </ngx-slick-carousel>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

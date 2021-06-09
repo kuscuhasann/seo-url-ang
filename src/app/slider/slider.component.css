@@ -1,0 +1,35 @@
+#yanyana_hizalama{
+    float: left;
+}
+
+ #card:hover{color:red;}
+ div {
+    
+    white-space:inherit;
+}
+ .slick-slide img {
+    height:400px;
+ }
+ #slider-cursor
+ {
+    cursor:pointer;
+ }
+
+
+ @media only screen and (max-width:1372px) {
+	
+   img{
+      height: 150px; 
+      width: 76%;
+      object-fit:fill;
+   }
+   }
+
+@media only screen and (min-width:1373px) {
+	
+      img{
+         height: 150px; 
+         width: 100%;
+         object-fit:fill;
+      }
+      }
