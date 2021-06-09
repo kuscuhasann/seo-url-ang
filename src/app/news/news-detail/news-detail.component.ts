@@ -4,6 +4,8 @@ import { NewsService } from "../../services/news.service";
 import { News } from "../../models/news";
 import { Photo } from "../../models/photo";
 
+import { MediaObserver } from '@angular/flex-layout';
+
 import {
   NgxGalleryOptions,
   NgxGalleryImage,
@@ -25,7 +27,8 @@ export class NewsDetailComponent implements OnInit, AfterViewInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private newsService: NewsService,
     private cdRef: ChangeDetectorRef,
-    private seoService:SeoService,
+    private mediaObserver: MediaObserver,
+    private seoSerive:SeoService,
   ) { }
 
   news: News;
@@ -40,7 +43,12 @@ export class NewsDetailComponent implements OnInit, AfterViewInit, OnDestroy {
       this.getNewsById(params["newsId"]);
     });
 
-    
+    this.mediaSub = this.mediaObserver.asObservable().subscribe(change => {
+      change.forEach((v) => {
+        console.log(v.mediaQuery, v.mqAlias);
+      });
+      console.log('-----');
+    });
   }
 
   ngAfterViewInit() {
@@ -57,7 +65,7 @@ export class NewsDetailComponent implements OnInit, AfterViewInit, OnDestroy {
     this.newsService.getNewsById(newsId).subscribe(data => {
       this.news = data;
       this.getPhotosByNews(newsId)
-      this.seoService.updateTitle(data.title)
+      this.seoSerive.updateTitle(data.title);
     });
   }
   getPhotosByNews(newsId){
@@ -79,6 +87,7 @@ export class NewsDetailComponent implements OnInit, AfterViewInit, OnDestroy {
     }
     return imageUrls;
   }
+ 
   setGallery(){
     this.galleryOptions = [
       {

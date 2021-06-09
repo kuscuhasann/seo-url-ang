@@ -4,11 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Photo } from "../models/photo";
   
 import { Component, OnInit, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-
+import { MediaObserver, MediaChange } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { style } from '@angular/animations';
-import { SeoService } from "../services/seo.service";
 
 @Component({
   selector: 'app-news',
@@ -22,8 +21,7 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
     private newsService: NewsService,
     private activatedRoute:ActivatedRoute,
     private cdRef: ChangeDetectorRef,
-    private seoService:SeoService,
-   
+    private mediaObserver: MediaObserver,
 
     ) { }
 
@@ -32,6 +30,7 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
   
   ngOnInit() {
     this.activatedRoute.params.subscribe(params=>{
+     
       if(params["categoryId"]){
         this.getNewsForCategories(params["categoryId"])
       }else{
@@ -39,7 +38,12 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
       }
       
     });
-    
+    this.mediaSub = this.mediaObserver.asObservable().subscribe(change => {
+      change.forEach((v) => {
+        console.log(v.mediaQuery, v.mqAlias);
+      });
+      console.log('-----');
+    });
   }
 
   ngAfterViewInit() {

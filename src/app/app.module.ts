@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgxGalleryModule } from 'ngx-gallery-9';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { MaterialModule } from './core/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -23,6 +24,7 @@ import { MaterialModule } from './core/material.module';
     HttpClientModule,
     NgxGalleryModule,
     MaterialModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
