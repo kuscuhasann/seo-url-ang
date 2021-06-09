@@ -7,6 +7,8 @@ import { NewsComponent } from './news/news.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NgxGalleryModule } from 'ngx-gallery-9';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { MaterialModule } from './core/material.module';
+
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
     AppRoutingModule,
     HttpClientModule,
     NgxGalleryModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
