@@ -1,6 +1,6 @@
 <div fxLayout="row wrap">
 
-  <div *ngFor="let news of news" routerLink="/newsDetail/{{news.id}}/{{news.title}}" class="btn btn-sm btn-light" fxFlex="0 0 100%" [ngStyle.gt-sm]="{'margin.px': 6}"
+  <div *ngFor="let news of news" routerLink="/newsDetail/{{news.id}}/{{news.title | urlformat}}" class="btn btn-sm btn-light" fxFlex="0 0 100%" [ngStyle.gt-sm]="{'margin.px': 6}"
     [ngStyle]="{'margin.px': 6, 'margin-bottom.px': 20} " fxFlex.gt-sm="0 0 calc(33% -12px)">
     <mat-card>
       <img mat-card-image src="{{news.photoUrl}}" alt="Photo of a item">

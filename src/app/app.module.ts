@@ -9,14 +9,19 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { MaterialModule } from './core/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NavComponent } from './nav/nav.component';
+import { UrlformatPipe } from './pipes/urlformat.pipe';
+
 
 
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
       NewsComponent,
       NewsDetailComponent,
+      NavComponent,
+      UrlformatPipe,
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
