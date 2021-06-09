@@ -12,18 +12,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavComponent } from './nav/nav.component';
 import { UrlformatPipe } from './pipes/urlformat.pipe';
 import { DownNavComponent } from './down-nav/down-nav.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+
 
 
 
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
       NewsComponent,
       NewsDetailComponent,
       NavComponent,
       UrlformatPipe,
-      DownNavComponent
+      DownNavComponent,
+      PrivacyPolicyComponent,
    ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
