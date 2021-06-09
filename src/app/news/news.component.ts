@@ -31,9 +31,7 @@ export class NewsComponent implements OnInit, AfterViewInit, OnDestroy {
   private mediaSub: Subscription;
   
   ngOnInit() {
-
     this.activatedRoute.params.subscribe(params=>{
-     this.seoService.updateTitle('Oldumu')
       if(params["categoryId"]){
         this.getNewsForCategories(params["categoryId"])
       }else{
