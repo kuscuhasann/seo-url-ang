@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './news/news.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NgxGalleryModule } from 'ngx-gallery-9';
-import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+
 import { MaterialModule } from './core/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NavComponent } from './nav/nav.component';
@@ -15,9 +15,11 @@ import { DownNavComponent } from './down-nav/down-nav.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { SliderComponent } from './slider/slider.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { SeoService } from './services/seo.service';
 
 @NgModule({
-  declarations: [						
+  declarations: [							
     AppComponent,
       NewsComponent,
       NewsDetailComponent,
@@ -25,10 +27,11 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
       UrlformatPipe,
       DownNavComponent,
       PrivacyPolicyComponent,
-      SliderComponent
+      SliderComponent,
+      NewsDetailComponent
    ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({ appId: 'deneme' }),
     AppRoutingModule,
     HttpClientModule,
     NgxGalleryModule,
@@ -36,7 +39,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     FlexLayoutModule,
     SlickCarouselModule,
   ],
-  providers: [],
+  providers: [SeoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,6 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
-import { NewsService } from "../../services/news.service";
-import { News } from "../../models/news";
-import { Photo } from "../../models/photo";
+
 
 import { MediaObserver } from '@angular/flex-layout';
 
@@ -11,8 +9,12 @@ import {
   NgxGalleryImage,
   NgxGalleryAnimation
 } from "ngx-gallery-9";
+
 import { Subscription } from 'rxjs';
 import { SeoService } from 'src/app/services/seo.service';
+import { NewsService } from '../services/news.service';
+import { News } from '../models/news';
+import { Photo } from '../models/photo';
 
 
 @Component({
